@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Application Autofill</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Job Application Autofill</h1>
+      <p class="subtitle">Auto-saves as you type</p>
+    </header>
+
+    <div class="tabs">
+      <button class="tab-button active" data-tab="profile">Profile</button>
+      <button class="tab-button" data-tab="settings">Settings</button>
+    </div>
+
+    <!-- Profile Tab -->
+    <div id="profile-tab" class="tab-content active">
+      <form id="profile-form">
+        <!-- Personal Information Section -->
+        <section class="form-section">
+          <h2>Personal Information</h2>
+          <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName" placeholder="John">
+          </div>
+          <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName" placeholder="Doe">
+          </div>
+          <div class="form-group">
+            <label for="fullName">Full Name (if needed separately)</label>
+            <input type="text" id="fullName" name="fullName" placeholder="John Doe">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="john.doe@example.com">
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567">
+          </div>
+        </section>
+
+        <!-- Address Section -->
+        <section class="form-section">
+          <h2>Address</h2>
+          <div class="form-group">
+            <label for="address">Street Address</label>
+            <input type="text" id="address" name="address" placeholder="123 Main Street">
+          </div>
+          <div class="form-group">
+            <label for="city">City</label>
+            <input type="text" id="city" name="city" placeholder="San Francisco">
+          </div>
+          <div class="form-group">
+            <label for="state">State/Province</label>
+            <input type="text" id="state" name="state" placeholder="CA">
+          </div>
+          <div class="form-group">
+            <label for="zipCode">ZIP/Postal Code</label>
+            <input type="text" id="zipCode" name="zipCode" placeholder="94102">
+          </div>
+          <div class="form-group">
+            <label for="country">Country</label>
+            <input type="text" id="country" name="country" placeholder="United States">
+          </div>
+        </section>
+
+        <!-- Education Section -->
+        <section class="form-section">
+          <h2>Education</h2>
+          <div class="form-group">
+            <label for="school">School/University</label>
+            <input type="text" id="school" name="school" placeholder="University of California">
+          </div>
+          <div class="form-group">
+            <label for="degree">Degree</label>
+            <input type="text" id="degree" name="degree" placeholder="Bachelor of Science">
+          </div>
+          <div class="form-group">
+            <label for="major">Major/Field of Study</label>
+            <input type="text" id="major" name="major" placeholder="Computer Science">
+          </div>
+          <div class="form-group">
+            <label for="gpa">GPA</label>
+            <input type="text" id="gpa" name="gpa" placeholder="3.8">
+          </div>
+          <div class="form-group">
+            <label for="graduationDate">Graduation Date</label>
+            <input type="date" id="graduationDate" name="graduationDate">
+          </div>
+        </section>
+
+        <!-- URLs Section -->
+        <section class="form-section">
+          <h2>Links & URLs</h2>
+          <div class="form-group">
+            <label for="linkedin">LinkedIn Profile</label>
+            <input type="url" id="linkedin" name="linkedin" placeholder="https://linkedin.com/in/yourname">
+          </div>
+          <div class="form-group">
+            <label for="website">Personal Website</label>
+            <input type="url" id="website" name="website" placeholder="https://yourwebsite.com">
+          </div>
+          <div class="form-group">
+            <label for="github">GitHub Profile</label>
+            <input type="url" id="github" name="github" placeholder="https://github.com/yourusername">
+          </div>
+        </section>
+
+        <!-- Status Questions Section -->
+        <section class="form-section">
+          <h2>Status Questions</h2>
+          <div class="form-group">
+            <label for="willingToRelocate">Willing to Relocate?</label>
+            <select id="willingToRelocate" name="willingToRelocate">
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="veteranStatus">Veteran Status</label>
+            <select id="veteranStatus" name="veteranStatus">
+              <option value="decline">Decline to answer</option>
+              <option value="yes">Yes, I am a veteran</option>
+              <option value="no">No, I am not a veteran</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="disabilityStatus">Disability Status</label>
+            <select id="disabilityStatus" name="disabilityStatus">
+              <option value="decline">Decline to answer</option>
+              <option value="yes">Yes, I have a disability</option>
+              <option value="no">No, I don't have a disability</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="previouslyWorked">Have you worked here before?</label>
+            <select id="previouslyWorked" name="previouslyWorked">
+              <option value="no">No</option>
+              <option value="yes">Yes</option>
+            </select>
+          </div>
+        </section>
+
+        <!-- Demographics Section -->
+        <section class="form-section">
+          <h2>Demographics (Optional)</h2>
+          <div class="form-group">
+            <label for="hispanic">Hispanic or Latino?</label>
+            <select id="hispanic" name="hispanic">
+              <option value="decline">Decline to answer</option>
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="gender">Gender</label>
+            <select id="gender" name="gender">
+              <option value="decline">Decline to answer</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="non-binary">Non-binary</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="race">Race/Ethnicity</label>
+            <select id="race" name="race">
+              <option value="decline">Decline to answer</option>
+              <option value="american-indian">American Indian or Alaska Native</option>
+              <option value="asian">Asian</option>
+              <option value="black">Black or African American</option>
+              <option value="hispanic">Hispanic or Latino</option>
+              <option value="pacific-islander">Native Hawaiian or Pacific Islander</option>
+              <option value="white">White</option>
+              <option value="two-or-more">Two or more races</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="sexuality">LGBTQ+ Identification</label>
+            <select id="sexuality" name="sexuality">
+              <option value="decline">Decline to answer</option>
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+          </div>
+        </section>
+
+        <!-- Work Authorization Section -->
+        <section class="form-section">
+          <h2>Work Authorization</h2>
+          <div class="form-group">
+            <label for="sponsorship">Require Visa Sponsorship?</label>
+            <select id="sponsorship" name="sponsorship">
+              <option value="no">No</option>
+              <option value="yes">Yes</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="clearance">Security Clearance</label>
+            <input type="text" id="clearance" name="clearance" placeholder="e.g., Secret, Top Secret, None">
+          </div>
+        </section>
+
+        <!-- Other Information Section -->
+        <section class="form-section">
+          <h2>Other Information</h2>
+          <div class="form-group">
+            <label for="referralSource">How did you hear about this position?</label>
+            <input type="text" id="referralSource" name="referralSource" placeholder="e.g., LinkedIn, Company Website, Referral">
+          </div>
+          <div class="form-group">
+            <label for="desiredSalary">Desired Salary</label>
+            <input type="text" id="desiredSalary" name="desiredSalary" placeholder="e.g., $80,000 or Negotiable">
+          </div>
+          <div class="form-group">
+            <label for="startDate">Earliest Start Date</label>
+            <input type="date" id="startDate" name="startDate">
+          </div>
+          <div class="form-group">
+            <label for="coverLetter">Default Cover Letter Text</label>
+            <textarea id="coverLetter" name="coverLetter" rows="4" placeholder="Your default cover letter text..."></textarea>
+          </div>
+          <div class="form-group">
+            <label for="additionalInfo">Additional Information</label>
+            <textarea id="additionalInfo" name="additionalInfo" rows="3" placeholder="Any other information you commonly provide..."></textarea>
+          </div>
+        </section>
+
+        <div class="button-group">
+          <button type="button" id="clear-btn" class="btn btn-secondary">Clear All</button>
+        </div>
+      </form>
+
+      <div id="save-message" class="message"></div>
+    </div>
+
+    <!-- Settings Tab -->
+    <div id="settings-tab" class="tab-content">
+      <section class="form-section">
+        <h2>Import/Export</h2>
+        <p class="help-text">Backup your profile data or transfer it to another browser.</p>
+        
+        <div class="button-group">
+          <button id="export-btn" class="btn btn-primary">Export Profile</button>
+          <button id="import-btn" class="btn btn-secondary">Import Profile</button>
+        </div>
+        
+        <input type="file" id="import-file" accept=".json" style="display: none;">
+        <textarea id="export-data" rows="10" readonly style="display: none; margin-top: 10px; width: 100%; font-family: monospace; font-size: 12px;"></textarea>
+      </section>
+
+      <section class="form-section">
+        <h2>Quick Fill</h2>
+        <p class="help-text">Use <kbd>Ctrl+Shift+F</kbd> (or <kbd>Cmd+Shift+F</kbd> on Mac) to quickly autofill the current page.</p>
+        <p class="help-text">Or click the extension icon and it will autofill automatically.</p>
+      </section>
+
+      <section class="form-section">
+        <h2>About</h2>
+        <p class="help-text">Job Application Autofill v1.0.0</p>
+        <p class="help-text">Automatically fills job application forms with your information.</p>
+      </section>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

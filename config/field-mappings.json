@@ -1,0 +1,553 @@
+{
+  "firstName": {
+    "profileField": "firstName",
+    "selectors": [
+      "input[name*='first'][name*='name']",
+      "input[id*='first'][id*='name']",
+      "input[name='firstName']",
+      "input[id='firstName']",
+      "input[name='first_name']",
+      "input[id='first_name']"
+    ],
+    "keywords": ["first name", "given name", "fname", "forename"],
+    "fuzzyMatch": true,
+    "type": "text"
+  },
+  "lastName": {
+    "profileField": "lastName",
+    "selectors": [
+      "input[name*='last'][name*='name']",
+      "input[id*='last'][id*='name']",
+      "input[name='lastName']",
+      "input[id='lastName']",
+      "input[name='last_name']",
+      "input[id='last_name']"
+    ],
+    "keywords": ["last name", "surname", "lname", "family name"],
+    "fuzzyMatch": true,
+    "type": "text"
+  },
+  "fullName": {
+    "profileField": "fullName",
+    "selectors": [
+      "input[name='name']",
+      "input[id='name']",
+      "input[name='fullName']",
+      "input[id='fullName']",
+      "input[name='full_name']"
+    ],
+    "keywords": ["full name", "your name", "name"],
+    "fuzzyMatch": true,
+    "type": "text"
+  },
+  "email": {
+    "profileField": "email",
+    "selectors": [
+      "input[type='email']",
+      "input[name*='email']",
+      "input[id*='email']"
+    ],
+    "keywords": ["email", "e-mail", "email address"],
+    "fuzzyMatch": true,
+    "type": "email"
+  },
+  "phone": {
+    "profileField": "phone",
+    "selectors": [
+      "input[type='tel']",
+      "input[name*='phone']",
+      "input[id*='phone']",
+      "input[name*='mobile']",
+      "input[id*='mobile']"
+    ],
+    "keywords": ["phone", "telephone", "mobile", "cell", "phone number"],
+    "fuzzyMatch": true,
+    "type": "tel"
+  },
+  "address": {
+    "profileField": "address",
+    "selectors": [
+      "input[name*='address']",
+      "input[id*='address']",
+      "input[name*='street']",
+      "input[id*='street']"
+    ],
+    "keywords": ["address", "street address", "street", "address line"],
+    "fuzzyMatch": true,
+    "type": "text"
+  },
+  "city": {
+    "profileField": "city",
+    "selectors": [
+      "input[name*='city']",
+      "input[id*='city']"
+    ],
+    "keywords": ["city", "town"],
+    "fuzzyMatch": true,
+    "type": "text"
+  },
+  "state": {
+    "profileField": "state",
+    "selectors": [
+      "select[name*='state']",
+      "select[id*='state']",
+      "input[name*='state']",
+      "input[id*='state']"
+    ],
+    "keywords": ["state", "province", "region"],
+    "fuzzyMatch": true,
+    "type": "text"
+  },
+  "zipCode": {
+    "profileField": "zipCode",
+    "selectors": [
+      "input[name*='zip']",
+      "input[id*='zip']",
+      "input[name*='postal']",
+      "input[id*='postal']"
+    ],
+    "keywords": ["zip", "zip code", "postal code", "postcode"],
+    "fuzzyMatch": true,
+    "type": "text"
+  },
+  "country": {
+    "profileField": "country",
+    "selectors": [
+      "select[name*='country']",
+      "select[id*='country']",
+      "input[name*='country']",
+      "input[id*='country']"
+    ],
+    "keywords": ["country"],
+    "fuzzyMatch": true,
+    "type": "text"
+  },
+  "willingToRelocate": {
+    "profileField": "willingToRelocate",
+    "selectors": [
+      "select[name*='relocat']",
+      "select[id*='relocat']",
+      "input[name*='relocat'][type='radio']",
+      "input[id*='relocat'][type='radio']"
+    ],
+    "keywords": [
+      "willing to relocate",
+      "open to relocation",
+      "relocate",
+      "relocation",
+      "would you relocate"
+    ],
+    "fuzzyMatch": true,
+    "type": "select",
+    "valueMapping": {
+      "yes": ["yes", "willing to relocate"],
+      "no": ["no", "not willing to relocate"]
+    }
+  },
+  "school": {
+    "profileField": "school",
+    "selectors": [
+      "input[name*='school']",
+      "input[id*='school']",
+      "input[name*='university']",
+      "input[id*='university']",
+      "input[name*='college']",
+      "input[id*='college']"
+    ],
+    "keywords": ["school", "university", "college", "institution", "educational institution"],
+    "fuzzyMatch": true,
+    "type": "text"
+  },
+  "degree": {
+    "profileField": "degree",
+    "selectors": [
+      "select[name*='degree']",
+      "select[id*='degree']",
+      "input[name*='degree']",
+      "input[id*='degree']"
+    ],
+    "keywords": ["degree", "education level", "qualification"],
+    "fuzzyMatch": true,
+    "type": "text"
+  },
+  "major": {
+    "profileField": "major",
+    "selectors": [
+      "input[name*='major']",
+      "input[id*='major']",
+      "input[name*='field']",
+      "input[id*='field']"
+    ],
+    "keywords": ["major", "field of study", "area of study", "concentration"],
+    "fuzzyMatch": true,
+    "type": "text"
+  },
+  "gpa": {
+    "profileField": "gpa",
+    "selectors": [
+      "input[name*='gpa']",
+      "input[id*='gpa']",
+      "input[name*='grade']",
+      "input[id*='grade']"
+    ],
+    "keywords": ["gpa", "grade point average", "grades"],
+    "fuzzyMatch": true,
+    "type": "text"
+  },
+  "graduationDate": {
+    "profileField": "graduationDate",
+    "selectors": [
+      "input[name*='graduat'][type='date']",
+      "input[id*='graduat'][type='date']",
+      "select[name*='graduat']",
+      "select[id*='graduat']",
+      "input[name*='completion']",
+      "input[id*='completion']"
+    ],
+    "keywords": ["graduation date", "graduation year", "completion date", "expected graduation"],
+    "fuzzyMatch": true,
+    "type": "date"
+  },
+  "hispanic": {
+    "profileField": "hispanic",
+    "selectors": [
+      "select[name*='hispanic']",
+      "select[id*='hispanic']",
+      "input[name*='hispanic'][type='radio']",
+      "input[id*='hispanic'][type='radio']",
+      "select[name*='latino']",
+      "input[name*='latino'][type='radio']"
+    ],
+    "keywords": [
+      "hispanic or latino",
+      "hispanic",
+      "latino",
+      "latina",
+      "are you hispanic",
+      "ethnicity hispanic"
+    ],
+    "fuzzyMatch": true,
+    "type": "select",
+    "valueMapping": {
+      "yes": ["yes", "hispanic or latino", "hispanic", "latino"],
+      "no": ["no", "not hispanic or latino", "not hispanic"],
+      "decline": ["decline", "prefer not to answer", "i don't wish to answer"]
+    }
+  },
+  "linkedin": {
+    "profileField": "linkedin",
+    "selectors": [
+      "input[name*='linkedin']",
+      "input[id*='linkedin']",
+      "input[placeholder*='linkedin']",
+      "input[aria-label*='linkedin']"
+    ],
+    "keywords": ["linkedin", "linked in", "linkedin profile", "linkedin url"],
+    "fuzzyMatch": true,
+    "type": "url"
+  },
+  "website": {
+    "profileField": "website",
+    "selectors": [
+      "input[name*='website']",
+      "input[name*='portfolio']",
+      "input[id*='website']",
+      "input[id*='portfolio']",
+      "input[placeholder*='website']",
+      "input[placeholder*='portfolio']"
+    ],
+    "keywords": ["website", "personal website", "portfolio", "portfolio url", "portfolio website", "web site"],
+    "fuzzyMatch": true,
+    "type": "url"
+  },
+  "github": {
+    "profileField": "github",
+    "selectors": [
+      "input[name*='github']",
+      "input[id*='github']",
+      "input[placeholder*='github']"
+    ],
+    "keywords": ["github", "git hub", "github profile", "github url"],
+    "fuzzyMatch": true,
+    "type": "url"
+  },
+  "veteranStatus": {
+    "profileField": "veteranStatus",
+    "selectors": [
+      "select[name*='veteran']",
+      "select[id*='veteran']",
+      "input[name*='veteran'][type='radio']",
+      "input[id*='veteran'][type='radio']"
+    ],
+    "keywords": [
+      "veteran status",
+      "veteran",
+      "protected veteran",
+      "military veteran",
+      "are you a veteran",
+      "have you served",
+      "military service"
+    ],
+    "fuzzyMatch": true,
+    "type": "select",
+    "valueMapping": {
+      "yes": ["yes", "i am a veteran", "veteran", "protected veteran", "i identify as one or more"],
+      "no": ["no", "i am not a veteran", "not a veteran", "i don't wish to answer", "decline to self identify"],
+      "decline": ["decline", "prefer not to answer", "i don't wish to answer", "decline to self identify"]
+    }
+  },
+  "disabilityStatus": {
+    "profileField": "disabilityStatus",
+    "selectors": [
+      "select[name*='disability']",
+      "select[id*='disability']",
+      "input[name*='disability'][type='radio']",
+      "input[id*='disability'][type='radio']"
+    ],
+    "keywords": [
+      "disability",
+      "disability status",
+      "do you have a disability",
+      "are you disabled",
+      "physical disability",
+      "mental disability"
+    ],
+    "fuzzyMatch": true,
+    "type": "select",
+    "valueMapping": {
+      "yes": ["yes", "yes, i have a disability", "i have a disability"],
+      "no": ["no", "no, i don't have a disability", "i don't have a disability"],
+      "decline": ["decline", "prefer not to answer", "i don't wish to answer", "decline to self identify"]
+    }
+  },
+  "previouslyWorked": {
+    "profileField": "previouslyWorked",
+    "selectors": [
+      "select[name*='worked']",
+      "select[name*='previous']",
+      "select[name*='employee']",
+      "input[name*='worked'][type='radio']",
+      "input[name*='previous'][type='radio']"
+    ],
+    "keywords": [
+      "have you worked here",
+      "previously worked",
+      "worked here before",
+      "former employee",
+      "past employee",
+      "have you ever been employed",
+      "worked for us before"
+    ],
+    "fuzzyMatch": true,
+    "type": "select",
+    "valueMapping": {
+      "yes": ["yes"],
+      "no": ["no"]
+    }
+  },
+  "gender": {
+    "profileField": "gender",
+    "selectors": [
+      "select[name*='gender']",
+      "select[id*='gender']",
+      "input[name*='gender'][type='radio']",
+      "input[id*='gender'][type='radio']"
+    ],
+    "keywords": [
+      "gender",
+      "gender identity",
+      "sex",
+      "what is your gender"
+    ],
+    "fuzzyMatch": true,
+    "type": "select",
+    "valueMapping": {
+      "male": ["male", "man", "m"],
+      "female": ["female", "woman", "f"],
+      "non-binary": ["non-binary", "nonbinary", "non binary", "other"],
+      "decline": ["decline", "prefer not to answer", "i don't wish to answer", "decline to self identify"]
+    }
+  },
+  "race": {
+    "profileField": "race",
+    "selectors": [
+      "select[name*='race']",
+      "select[name*='ethnicity']",
+      "select[id*='race']",
+      "select[id*='ethnicity']",
+      "input[name*='race'][type='radio']",
+      "input[name*='ethnicity'][type='radio']"
+    ],
+    "keywords": [
+      "race",
+      "ethnicity",
+      "racial",
+      "ethnic background",
+      "race/ethnicity",
+      "what is your race"
+    ],
+    "fuzzyMatch": true,
+    "type": "select",
+    "valueMapping": {
+      "american-indian": ["american indian", "alaska native", "native american"],
+      "asian": ["asian"],
+      "black": ["black", "african american", "african-american"],
+      "hispanic": ["hispanic", "latino", "latina", "latinx"],
+      "pacific-islander": ["native hawaiian", "pacific islander"],
+      "white": ["white", "caucasian"],
+      "two-or-more": ["two or more races", "multiple races"],
+      "decline": ["decline", "prefer not to answer", "i don't wish to answer", "decline to self identify"]
+    }
+  },
+  "sexuality": {
+    "profileField": "sexuality",
+    "selectors": [
+      "select[name*='lgbtq']",
+      "select[name*='sexual']",
+      "select[id*='lgbtq']",
+      "input[name*='lgbtq'][type='radio']",
+      "input[name*='sexual'][type='radio']"
+    ],
+    "keywords": [
+      "lgbtq",
+      "lgbt",
+      "sexual orientation",
+      "do you identify as lgbtq",
+      "lgbtq+"
+    ],
+    "fuzzyMatch": true,
+    "type": "select",
+    "valueMapping": {
+      "yes": ["yes", "i identify as lgbtq+"],
+      "no": ["no", "i do not identify as lgbtq+"],
+      "decline": ["decline", "prefer not to answer", "i don't wish to answer", "decline to self identify"]
+    }
+  },
+  "referralSource": {
+    "profileField": "referralSource",
+    "selectors": [
+      "select[name*='referral']",
+      "select[name*='source']",
+      "select[name*='hear']",
+      "select[id*='referral']",
+      "select[id*='source']"
+    ],
+    "keywords": [
+      "how did you hear",
+      "referral source",
+      "where did you hear",
+      "how did you find",
+      "source of referral"
+    ],
+    "fuzzyMatch": true,
+    "type": "select"
+  },
+  "sponsorship": {
+    "profileField": "sponsorship",
+    "selectors": [
+      "select[name*='sponsor']",
+      "select[name*='visa']",
+      "select[name*='authorization']",
+      "input[name*='sponsor'][type='radio']",
+      "input[name*='visa'][type='radio']"
+    ],
+    "keywords": [
+      "visa sponsorship",
+      "require sponsorship",
+      "work authorization",
+      "authorized to work",
+      "legally authorized",
+      "will you now or in the future require sponsorship"
+    ],
+    "fuzzyMatch": true,
+    "type": "select",
+    "valueMapping": {
+      "yes": ["yes", "i will require sponsorship"],
+      "no": ["no", "i will not require sponsorship", "i am authorized to work"]
+    }
+  },
+  "clearance": {
+    "profileField": "clearance",
+    "selectors": [
+      "select[name*='clearance']",
+      "select[name*='security']",
+      "input[name*='clearance'][type='radio']"
+    ],
+    "keywords": [
+      "security clearance",
+      "clearance",
+      "do you have clearance",
+      "current clearance"
+    ],
+    "fuzzyMatch": true,
+    "type": "select"
+  },
+  "salary": {
+    "profileField": "desiredSalary",
+    "selectors": [
+      "input[name*='salary']",
+      "input[name*='compensation']",
+      "input[id*='salary']",
+      "input[id*='compensation']"
+    ],
+    "keywords": [
+      "desired salary",
+      "expected salary",
+      "salary expectations",
+      "compensation",
+      "salary requirement"
+    ],
+    "fuzzyMatch": true,
+    "type": "text"
+  },
+  "startDate": {
+    "profileField": "startDate",
+    "selectors": [
+      "input[name*='start'][type='date']",
+      "input[name*='available'][type='date']",
+      "input[id*='start'][type='date']"
+    ],
+    "keywords": [
+      "start date",
+      "available date",
+      "when can you start",
+      "availability date",
+      "earliest start date"
+    ],
+    "fuzzyMatch": true,
+    "type": "date"
+  },
+  "coverLetter": {
+    "profileField": "coverLetter",
+    "selectors": [
+      "textarea[name*='cover']",
+      "textarea[name*='letter']",
+      "textarea[id*='cover']"
+    ],
+    "keywords": [
+      "cover letter",
+      "covering letter",
+      "letter of interest"
+    ],
+    "fuzzyMatch": true,
+    "type": "textarea"
+  },
+  "additionalInfo": {
+    "profileField": "additionalInfo",
+    "selectors": [
+      "textarea[name*='additional']",
+      "textarea[name*='other']",
+      "textarea[name*='comments']",
+      "textarea[id*='additional']"
+    ],
+    "keywords": [
+      "additional information",
+      "other information",
+      "comments",
+      "anything else",
+      "additional comments"
+    ],
+    "fuzzyMatch": true,
+    "type": "textarea"
+  }
+}
