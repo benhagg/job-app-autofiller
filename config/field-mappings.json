@@ -9,7 +9,7 @@
       "input[name='first_name']",
       "input[id='first_name']"
     ],
-    "keywords": ["first name", "given name", "fname", "forename"],
+    "keywords": ["first name", "given name", "fname", "legal first name"],
     "fuzzyMatch": true,
     "type": "text"
   },
@@ -23,7 +23,7 @@
       "input[name='last_name']",
       "input[id='last_name']"
     ],
-    "keywords": ["last name", "surname", "lname", "family name"],
+    "keywords": ["last name", "surname", "lname", "legal last name"],
     "fuzzyMatch": true,
     "type": "text"
   },
@@ -36,7 +36,7 @@
       "input[id='fullName']",
       "input[name='full_name']"
     ],
-    "keywords": ["full name", "your name", "name"],
+    "keywords": ["full name", "your name", "name", "legal name"],
     "fuzzyMatch": true,
     "type": "text"
   },
@@ -292,7 +292,7 @@
     "type": "select",
     "valueMapping": {
       "yes": ["yes", "i am a veteran", "veteran", "protected veteran", "i identify as one or more"],
-      "no": ["no", "i am not a veteran", "not a veteran", "i don't wish to answer", "decline to self identify"],
+      "no": ["no", "i am not a veteran", "not a veteran", "i don't wish to answer", "I am not a protected veteran"],
       "decline": ["decline", "prefer not to answer", "i don't wish to answer", "decline to self identify"]
     }
   },
@@ -354,10 +354,8 @@
       "input[id*='gender'][type='radio']"
     ],
     "keywords": [
-      "gender",
-      "gender identity",
-      "sex",
-      "what is your gender"
+      "what is your gender",
+      "gender identity"
     ],
     "fuzzyMatch": true,
     "type": "select",
@@ -365,6 +363,29 @@
       "male": ["male", "man", "m"],
       "female": ["female", "woman", "f"],
       "non-binary": ["non-binary", "nonbinary", "non binary", "other"],
+      "decline": ["decline", "prefer not to answer", "i don't wish to answer", "decline to self identify"]
+    }
+  },
+  "gender_pronouns":{
+    "profileField": "pronouns",
+    "selectors": [
+      "select[name*='pronoun']",
+      "select[id*='pronoun']",
+      "input[name*='pronoun'][type='radio']",
+      "input[id*='pronoun'][type='radio']"
+    ],
+    "keywords": [
+      "What gender pronouns do you prefer",
+      "pronouns",
+      "preferred pronouns",
+      "gender pronouns"
+    ],
+    "fuzzyMatch": true,
+    "type": "select",
+    "valueMapping": {
+      "he/him": ["he / him", "he / him / his", "he", "him"],
+      "she/her": ["she / her", "she / her / hers", "she", "her"],
+      "they/them": ["they / them", "they / them / theirs", "they", "them"],
       "decline": ["decline", "prefer not to answer", "i don't wish to answer", "decline to self identify"]
     }
   },
@@ -442,6 +463,26 @@
     "fuzzyMatch": true,
     "type": "select"
   },
+  "authorizedToWork" : {
+    "profileField": "authorizedToWork",
+    "selectors": [
+      "select[name*='authorized']",
+      "select[name*='work']",
+      "input[name*='authorized'][type='radio']",
+      "input[name*='work'][type='radio']"
+    ],
+    "keywords": [
+      "are you authorized to work",
+      "authorized to work",
+      "work authorization"
+    ],
+    "fuzzyMatch": true,
+    "type": "select",
+    "valueMapping": {
+      "yes": ["yes", "i am authorized to work"],
+      "no": ["no", "i am not authorized to work"]
+    }
+  },
   "sponsorship": {
     "profileField": "sponsorship",
     "selectors": [
@@ -456,14 +497,13 @@
       "require sponsorship",
       "work authorization",
       "authorized to work",
-      "legally authorized",
       "will you now or in the future require sponsorship"
     ],
     "fuzzyMatch": true,
     "type": "select",
     "valueMapping": {
-      "yes": ["yes", "i will require sponsorship"],
-      "no": ["no", "i will not require sponsorship", "i am authorized to work"]
+      "yes": ["Yes", "i will require sponsorship"],
+      "no": ["No", "i will not require sponsorship", "i am authorized to work"]
     }
   },
   "clearance": {

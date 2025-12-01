@@ -151,12 +151,12 @@ const FormFiller = {
   calculateMatchConfidence(element, mapping) {
     let confidence = 0;
 
-    // Check direct selectors (highest confidence)
+    // Check direct selectors
     if (mapping.selectors) {
       for (const selector of mapping.selectors) {
         try {
           if (element.matches(selector)) {
-            confidence = Math.max(confidence, 0.9);
+            confidence = Math.max(confidence, 0.7);
             break;
           }
         } catch (e) {
@@ -318,7 +318,6 @@ const FormFiller = {
         }
       }
     }
-
     return false;
   },
 
