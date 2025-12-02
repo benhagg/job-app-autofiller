@@ -156,7 +156,7 @@ const FormFiller = {
       for (const selector of mapping.selectors) {
         try {
           if (element.matches(selector)) {
-            confidence = Math.max(confidence, 0.7);
+            confidence = Math.max(confidence, 0.9);
             break;
           }
         } catch (e) {
@@ -327,7 +327,7 @@ const FormFiller = {
     this.triggerChange(textarea);
     return true;
   },
-
+  
   // Fill radio button
   fillRadio(radio, value, mapping) {
     // Find all radio buttons with the same name

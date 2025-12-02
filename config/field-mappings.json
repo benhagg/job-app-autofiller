@@ -6,6 +6,7 @@
       "input[id*='first'][id*='name']",
       "input[name='firstName']",
       "input[id='firstName']",
+      "input[id='PersonProfileFields.FirstName']",
       "input[name='first_name']",
       "input[id='first_name']"
     ],
@@ -19,6 +20,7 @@
       "input[name*='last'][name*='name']",
       "input[id*='last'][id*='name']",
       "input[name='lastName']",
+      "input[id='PersonProfileFields.LastName']",
       "input[id='lastName']",
       "input[name='last_name']",
       "input[id='last_name']"
@@ -36,7 +38,7 @@
       "input[id='fullName']",
       "input[name='full_name']"
     ],
-    "keywords": ["full name", "your name", "name", "legal name"],
+    "keywords": ["full name", "your name", "legal name"],
     "fuzzyMatch": true,
     "type": "text"
   },
@@ -80,7 +82,8 @@
     "profileField": "city",
     "selectors": [
       "input[name*='city']",
-      "input[id*='city']"
+      "input[id*='city']",
+      "input[id*='-1_PersonProfileFields.AddressCity']"
     ],
     "keywords": ["city", "town"],
     "fuzzyMatch": true,
@@ -104,7 +107,8 @@
       "input[name*='zip']",
       "input[id*='zip']",
       "input[name*='postal']",
-      "input[id*='postal']"
+      "input[id*='postal']",
+      "input[id*='-1_PersonProfileFields.AddressZip']"
     ],
     "keywords": ["zip", "zip code", "postal code", "postcode"],
     "fuzzyMatch": true,
@@ -115,6 +119,7 @@
     "selectors": [
       "select[name*='country']",
       "select[id*='country']",
+      "select[id*='-1_PersonProfileFields.AddressCountry']",
       "input[name*='country']",
       "input[id*='country']"
     ],
